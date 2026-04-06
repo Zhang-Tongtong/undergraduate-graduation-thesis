@@ -1,0 +1,16 @@
+{
+"pelvis":"base",
+"left_hip":"l_hip",
+"right_hip":"r_hip",
+"left_knee":"l_knee",
+"right_knee":"r_knee",
+"left_ankle":"l_ankle",
+"right_ankle":"r_ankle",
+"spine":"torso",
+"neck":"neck",
+"head":"head",
+"left_shoulder":"l_shoulder",
+"right_shoulder":"r_shoulder",
+"left_elbow":"l_elbow",
+"right_elbow":"r_elbow"
+}
