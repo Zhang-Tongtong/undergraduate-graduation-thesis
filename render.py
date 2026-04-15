@@ -5,7 +5,7 @@ import torch
 import cv2
 import os
 
-os.environ["PYOPENGL_PLATFORM"] = "osmesa" 
+# os.environ["PYOPENGL_PLATFORM"] = "osmesa" 
 from tqdm import tqdm
 from smplx import SMPL, SMPLX, SMPLH
 import pyrender
