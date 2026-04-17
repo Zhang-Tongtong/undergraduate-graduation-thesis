@@ -30,6 +30,8 @@ class G1FlatEnvCfg(TrackingEnvCfg):
             "right_wrist_yaw_link",
         ]
         self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/dod_0_109g000g_l000_g1_3:v4/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/dod_0_109g000g_l000_g1_rootyaw:v0/motion.npz"
+
 
 
 @configclass
