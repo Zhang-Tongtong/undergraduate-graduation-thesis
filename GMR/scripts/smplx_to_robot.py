@@ -150,7 +150,7 @@ if __name__ == "__main__":
     if args.save_path is not None:
         import pickle
         root_pos = np.array([qpos[:3] for qpos in qpos_list])
-        # save from wxyz to xyzw
+        # GMR retarget qpos stores root quaternion in wxyz; convert to xyzw before saving.
         root_rot = np.array([qpos[3:7][[1,2,3,0]] for qpos in qpos_list])
         dof_pos = np.array([qpos[7:] for qpos in qpos_list])
         local_body_pos = None
@@ -160,6 +160,8 @@ if __name__ == "__main__":
             "fps": aligned_fps,
             "root_pos": root_pos,
             "root_rot": root_rot,
+            "root_rot_format": "xyzw",
+            "root_pos_axis": "z_up",
             "dof_pos": dof_pos,
             "local_body_pos": local_body_pos,
             "link_body_list": body_names,

@@ -6,6 +6,7 @@ from typing import TYPE_CHECKING, Literal
 import isaaclab.utils.math as math_utils
 from isaaclab.assets import Articulation
 from isaaclab.envs.mdp.events import _randomize_prop_by_op
+from isaaclab.envs.mdp.events import push_by_setting_velocity as _push_by_setting_velocity
 from isaaclab.managers import SceneEntityCfg
 
 if TYPE_CHECKING:
@@ -91,3 +92,35 @@ def randomize_rigid_body_com(
 
     # Set the new coms
     asset.root_physx_view.set_coms(coms, env_ids)
+
+
+def push_by_setting_velocity_with_warmup(
+    env: ManagerBasedEnv,
+    env_ids: torch.Tensor,
+    velocity_range: dict[str, tuple[float, float]],
+    warmup_steps: int = 0,
+    ramp_steps: int = 0,
+    velocity_scale: float = 1.0,
+    asset_cfg: SceneEntityCfg = SceneEntityCfg("robot"),
+):
+    """Push robot with optional warmup and linear ramp-up.
+
+    This helps avoid early-training collapse on noisy reference motions.
+    """
+    current_step = int(getattr(env, "common_step_counter", 0))
+    if current_step < int(warmup_steps):
+        return
+
+    scale = float(max(velocity_scale, 0.0))
+    if ramp_steps > 0:
+        progress = (current_step - int(warmup_steps)) / float(ramp_steps)
+        scale *= float(min(max(progress, 0.0), 1.0))
+
+    if scale <= 0.0:
+        return
+
+    scaled_velocity_range = {
+        key: (float(v[0]) * scale, float(v[1]) * scale)
+        for key, v in velocity_range.items()
+    }
+    _push_by_setting_velocity(env, env_ids, scaled_velocity_range, asset_cfg=asset_cfg)

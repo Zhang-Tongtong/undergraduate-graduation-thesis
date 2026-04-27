@@ -29,8 +29,16 @@ class G1FlatEnvCfg(TrackingEnvCfg):
             "right_elbow_link",
             "right_wrist_yaw_link",
         ]
-        self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/dod_0_109g000g_l000_g1_3:v4/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/dod_0_109g000g_l000_g1_3:v4/motion.npz"
         # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/dod_0_109g000g_l000_g1_rootyaw:v0/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/ablv3_full_dod_0_109g000g_l000_g1_3_baseline_auto:v0/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/ablv3_full_dod_0_109g000g_l000_g1_3_align_smooth_clip:v0/motion.npz"
+
+        # self.commands.motion.motion_file ="/home/cc/undergraduate-graduation-thesis/artifacts/thesis_v1_legacy_wxyz:v0/motion.npz"
+        self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/thesis_v1_align_auto_wxyz:v0/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/thesis_v1_align_smooth_clip_wxyz:v0/motion.npz"
+        # self.commands.motion.motion_file = "/home/cc/undergraduate-graduation-thesis/artifacts/thesis_v2_align_smooth_doflight_wxyz:v0/motion.npz"
+
 
 
 

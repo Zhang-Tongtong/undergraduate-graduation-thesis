@@ -1,0 +1,40 @@
+{
+  "input_pkl": "GMR/test_outputs/dod_0_109g000g_l000_g1_3.pkl",
+  "output_csv": "GMR/test_outputs/ablation_csv/ablv3_smoke_dod_0_109g000g_l000_g1_3_rootyaw_blend.csv",
+  "num_frames": 255,
+  "root_rot_format_arg": "auto",
+  "root_rot_format_meta": "",
+  "root_rot_format_used": "auto",
+  "root_rot_format_inferred": "xyzw",
+  "root_rot_format_scores": {
+    "xyzw": {
+      "score": 0.1965018602369013,
+      "rp_median": 0.07527499294711482,
+      "rp_p95": 0.3667856561688746,
+      "delta_angle_p95": 0.055955852195620534
+    },
+    "wxyz": {
+      "score": 0.43299259023016057,
+      "rp_median": 0.23875556847631696,
+      "rp_p95": 0.6101518485269811,
+      "delta_angle_p95": 0.055957335978746414
+    }
+  },
+  "z_offset": 0.0,
+  "lock_root_xy": false,
+  "smooth_yaw": true,
+  "yaw_window": 9,
+  "yaw_polyorder": 2,
+  "root_attitude_blend": 0.35,
+  "max_abs_roll_pitch_rad": 0.6,
+  "raw_yaw_min": -0.39728806983386833,
+  "raw_yaw_max": 0.5545437470770478,
+  "proc_yaw_min": -0.3976732308869995,
+  "proc_yaw_max": 0.5534345289588896,
+  "mean_abs_roll_raw": 0.06328236722476394,
+  "mean_abs_pitch_raw": 0.04343171478485609,
+  "mean_abs_roll_proc": 0.04113353869609655,
+  "mean_abs_pitch_proc": 0.028230614610156465,
+  "mean_delta_root_rot_angle_rad": 0.028649277578505643,
+  "p95_delta_root_rot_angle_rad": 0.09435890655150335
+}

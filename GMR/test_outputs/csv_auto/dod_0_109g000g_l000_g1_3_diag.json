@@ -1,0 +1,26 @@
+{
+  "input_pkl": "GMR/test_outputs/dod_0_109g000g_l000_g1_3.pkl",
+  "output_csv": "GMR/test_outputs/csv_auto/dod_0_109g000g_l000_g1_3.csv",
+  "num_frames": 255,
+  "z_offset": 0.0,
+  "root_rot_format_arg": "auto",
+  "root_rot_format_meta": "",
+  "root_rot_format_used": "auto",
+  "root_rot_format_inferred": "xyzw",
+  "root_rot_format_scores": {
+    "xyzw": {
+      "score": 0.1965018602369013,
+      "rp_median": 0.07527499294711482,
+      "rp_p95": 0.3667856561688746,
+      "delta_angle_p95": 0.055955852195620534
+    },
+    "wxyz": {
+      "score": 0.43299259023016057,
+      "rp_median": 0.23875556847631696,
+      "rp_p95": 0.6101518485269811,
+      "delta_angle_p95": 0.055957335978746414
+    }
+  },
+  "root_pos_z_min": 0.9763915538787842,
+  "root_pos_z_max": 1.0811833143234253
+}
